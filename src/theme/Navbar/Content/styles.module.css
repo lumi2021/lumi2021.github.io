@@ -1,0 +1,99 @@
+/* Hide color mode toggle in small viewports */
+@media (max-width: 996px) {
+    .colorModeToggle {
+        display: none;
+    }
+}
+
+/*
+Restore some Infima style that broke with CSS Cascade Layers
+See https://github.com/facebook/docusaurus/pull/11142
+ */
+:global(.navbar__items--right) > :last-child {
+    padding-right: 0;
+}
+
+.navbar_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.items_container {
+    display: flex;
+    height: 100%;
+    width: calc(100% / 3);
+}
+
+.items_container.items_left {
+    justify-content: flex-start;
+}
+.items_container.items_center {
+    justify-content: space-evenly;
+}
+.items_container.items_right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav_app::before {
+    content: "";
+    height: var(--ifm-navbar-height);
+    bottom: 0;
+    position: absolute;
+
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #808080aa 40%, #000a 60%);
+    align-items: center;
+    border-radius: 10px;
+    filter: blur(3px);
+    overflow: hidden;
+}
+.nav_app {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--ifm-color-secondary);
+    margin: 0 5px;
+    width: 100%;
+    text-align: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--ifm-font-color-base);
+    border-bottom-color: var(--ifm-font-color-base-inverse);
+    border-left-color: var(--ifm-font-color-base-inverse);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--ifm-font-color-base);
+}
+.nav_app:hover {
+    filter: brightness(0.5);
+}
+
+.nav_home {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1/1;
+
+    background-image: url('/img/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.nav_dock {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1/1;
+    color: var(--ifm-color-text-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+}

@@ -1,30 +1,60 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+[data-theme='light'] {
+  --ifm-color-primary: #8030cb;
+  --ifm-color-primary-dark: #7026b6;
+  --ifm-color-primary-darker: #6a24ac;
+  --ifm-color-primary-darkest: #571d8e;
+  --ifm-color-primary-light: #903fe0;
+  --ifm-color-primary-lighter: #9748e3;
+  --ifm-color-primary-lightest: #ad66e9;
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #f8f8f2;
+  --ifm-background-surface-color: #ffffff;
+  
+  --ifm-font-color-base: #282a36;
+  --ifm-color-content-secondary: #6272a4;
+  
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-link-color: #44475a;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-footer-background-color: #282a36;
+
+  --ifm-toc-border-color: #e2e2dc;
+  --ifm-hr-border-color: #e2e2dc;
+  --ifm-global-border-color: #d6d6ce;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #bd93f9;
+  --ifm-color-primary-dark: #aa75f8;
+  --ifm-color-primary-darker: #a066f7;
+  --ifm-color-primary-darkest: #833bf5;
+  --ifm-color-primary-light: #d0b1fa;
+  --ifm-color-primary-lighter: #d9c0fa;
+  --ifm-color-primary-lightest: #f4edfd;
+
+  --ifm-background-color: #282a36;
+  --ifm-background-surface-color: #343746;
+  
+  --ifm-font-color-base: #f8f8f2;
+  --ifm-color-content-secondary: #6272a4;
+
+  --ifm-navbar-background-color: #21222c;
+  --ifm-navbar-link-color: #f8f8f2;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-footer-background-color: #191a21;
+
+  --ifm-toc-border-color: #44475a;
+  --ifm-hr-border-color: #44475a;
+  --ifm-global-border-color: #44475a;
+}
+
+html,
+body,
+.navbar,
+.footer,
+[class*='mainWrapper'] {
+  transition: 
+    background-color 0.4s ease, 
+    color 0.4s ease, 
+    border-color 0.4s ease;
 }

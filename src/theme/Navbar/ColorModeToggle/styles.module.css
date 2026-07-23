@@ -1,0 +1,7 @@
+.darkNavbarColorModeToggle {
+  height: 100%;
+}
+
+.darkNavbarColorModeToggle:hover {
+  background: var(--ifm-color-gray-800);
+}

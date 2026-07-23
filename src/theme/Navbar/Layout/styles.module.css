@@ -1,0 +1,66 @@
+.navbar {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: var(--ifm-navbar-height);
+}
+
+.navbar_backdrop::before {
+    content: "";
+    width: 100%;
+    height: var(--ifm-navbar-height);
+    bottom: 0;
+    position: absolute;
+
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 0.9;
+    
+    transition:
+        filter 1s ease,
+        background 1s ease;
+}
+[data-theme='light'] .navbar_backdrop::before {
+    background: linear-gradient(to bottom, var(--ifm-background-color) 40%, var(--ifm-color-primary) 70%);
+    filter: blur(10px);
+}
+[data-theme='dark'] .navbar_backdrop::before {
+    background: linear-gradient(to bottom, var(--ifm-background-color) 60%, var(--ifm-color-primary) 70%);
+    filter: blur(6px);
+}
+
+.navbar_backdrop {
+    width: 100%;
+    height: var(--ifm-navbar-height);
+    bottom: 0;
+    position: absolute;
+
+    border: 1px solid var(--ifm-font-color-base);
+    border-left: none;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.navbar_content {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    height: var(--ifm-navbar-height);
+
+    background: none;
+    border-radius: 10px 10px 0 0;
+
+    display: flex;
+    margin: 0 1rem;
+    padding: 5px 5px;
+}
+
+.navbarHideable {
+    transition: transform var(--ifm-transition-fast) ease;
+}
+
+.navbarHidden {
+    transform: translate3d(0, calc(-100% - 2px), 0);
+}

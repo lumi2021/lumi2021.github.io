@@ -1,0 +1,9 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar_spacer {
+    height: var(--ifm-navbar-height);
+}
